@@ -22,6 +22,10 @@ struct RootView: View {
         .background(Theme.cream.ignoresSafeArea())
         .tint(Theme.ink)
         .sheet(isPresented: $showPaywall) { PaywallView() }
+        #if DEBUG
+        // -paywall: 直接弹解锁页，供 ASC 内购审核截图用
+        .onAppear { if CommandLine.arguments.contains("-paywall") { showPaywall = true } }
+        #endif
         .sheet(isPresented: $showCustom) {
             CustomTimerSheet { emoji, label, seconds in
                 start(label: label, emoji: emoji, seconds: seconds)
