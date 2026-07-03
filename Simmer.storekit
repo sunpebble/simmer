@@ -1,0 +1,33 @@
+{
+  "identifier" : "A1B2C3D4-0000-4000-8000-000000000002",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "6F000002",
+      "localizations" : [
+        {
+          "description" : "Unlimited parallel timers and every future Pro feature. Forever.",
+          "displayName" : "Simmer Pro — Lifetime",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.sunpebble.simmer.lifetime",
+      "referenceName" : "Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

@@ -1,0 +1,85 @@
+name: Simmer
+options:
+  bundleIdPrefix: com.sunpebble
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: 62HCT6Q83X
+    MARKETING_VERSION: 0.1.0 # x-release-please-version
+    CURRENT_PROJECT_VERSION: 1
+targets:
+  Simmer:
+    type: application
+    platform: iOS
+    sources:
+      - App
+      - Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.sunpebble.simmer
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Simmer
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen: {}
+        # ponytail: fixed cream theme — lock light mode so default text never renders white
+        UIUserInterfaceStyle: Light
+        NSSupportsLiveActivities: true
+        ITSAppUsesNonExemptEncryption: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+    dependencies:
+      - target: SimmerWidget
+        embed: true
+  SimmerWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - Widget
+      - Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.sunpebble.simmer.widget
+    info:
+      path: Widget/Info.plist
+      properties:
+        CFBundleDisplayName: Simmer
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+  SimmerTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - Tests
+      - path: Simmer.storekit
+        buildPhase: resources
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - target: Simmer
+schemes:
+  Simmer:
+    build:
+      targets:
+        Simmer: all
+    run:
+      config: Debug
+      storeKitConfiguration: Simmer.storekit
+      commandLineArguments:
+        "-pro": false
+    test:
+      targets:
+        - SimmerTests
