@@ -78,6 +78,7 @@ struct RootView: View {
                             }
                         }
                         .contextMenu {
+                            Button("Restart") { store.restart(timer.id) }
                             Button("+1 minute") { store.addMinute(timer.id) }
                             Button("Cancel", role: .destructive) { store.dismiss(timer.id) }
                         }
@@ -163,6 +164,9 @@ struct BurnerView: View {
                         Text("DONE")
                             .font(Theme.font(15, weight: .bold))
                             .foregroundStyle(Theme.flame)
+                        Text("OVER +\(timerText(timer.overdue(at: now)))")
+                            .font(Theme.font(9, weight: .semibold).monospacedDigit())
+                            .foregroundStyle(Theme.faded)
                     } else {
                         Text(timerText(timer.remaining(at: now)))
                             .font(Theme.font(17, weight: .bold).monospacedDigit())

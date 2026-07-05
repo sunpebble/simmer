@@ -15,6 +15,7 @@ struct PaywallView: View {
                 feature("timer", "Run every burner at once — unlimited timers")
                 feature("bolt.badge.clock", "All of them grouped in the Dynamic Island")
                 feature("bookmark", "Save your go-to timers as presets")
+                feature("arrow.clockwise", "Restart finished timers without rebuilding them")
                 feature("heart", "Support an indie developer")
             }
             .padding(.vertical, 8)

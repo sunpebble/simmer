@@ -66,6 +66,17 @@ final class TimerStore {
         changed()
     }
 
+    func restart(_ id: UUID, now: Date = .now) {
+        guard let index = timers.firstIndex(where: { $0.id == id }) else { return }
+        var timer = timers[index]
+        timer.endDate = now.addingTimeInterval(timer.totalDuration)
+        timer.pausedRemaining = nil
+        cancelNotification(id)
+        schedule(timer)
+        timers[index] = timer
+        changed()
+    }
+
     func dismiss(_ id: UUID) {
         cancelNotification(id)
         timers.removeAll { $0.id == id }

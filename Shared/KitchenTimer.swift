@@ -19,6 +19,11 @@ struct KitchenTimer: Identifiable, Codable, Equatable {
         isRunning && remaining(at: now) <= 0
     }
 
+    func overdue(at now: Date = .now) -> TimeInterval {
+        guard let endDate, now > endDate else { return 0 }
+        return now.timeIntervalSince(endDate)
+    }
+
     func progress(at now: Date = .now) -> Double {
         guard totalDuration > 0 else { return 1 }
         return min(1, 1 - remaining(at: now) / totalDuration)

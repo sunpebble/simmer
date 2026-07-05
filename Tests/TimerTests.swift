@@ -45,6 +45,17 @@ final class TimerTests: XCTestCase {
         XCTAssertEqual(store.timers[0].totalDuration, 960, accuracy: 0.001)
     }
 
+    func testOverdueAndRestart() {
+        let store = TimerStore(defaults: freshDefaults(), live: false)
+        store.start(label: "Egg", emoji: "🥚", duration: 60, now: t0)
+        let id = store.timers[0].id
+        XCTAssertEqual(store.timers[0].overdue(at: t0.addingTimeInterval(75)), 15, accuracy: 0.001)
+
+        store.restart(id, now: t0.addingTimeInterval(75))
+        XCTAssertEqual(store.timers[0].remaining(at: t0.addingTimeInterval(75)), 60, accuracy: 0.001)
+        XCTAssertFalse(store.timers[0].isDone(at: t0.addingTimeInterval(75)))
+    }
+
     func testPersistenceRoundtrip() {
         let defaults = freshDefaults()
         let store = TimerStore(defaults: defaults, live: false)
