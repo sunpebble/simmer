@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/sunpebble/simmer/compare/v0.3.0...v0.4.0) (2026-07-05)
+
+
+### Features
+
+* show overdue timers and allow restart ([7a85c90](https://github.com/sunpebble/simmer/commit/7a85c907c3ef9b645c193c0761458f010b296df4))
+
 ## [0.3.0](https://github.com/sunpebble/simmer/compare/v0.2.0...v0.3.0) (2026-07-05)
 
 
