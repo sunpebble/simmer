@@ -62,6 +62,19 @@ final class TimerTests: XCTestCase {
         XCTAssertTrue(store.timers.isEmpty)
     }
 
+    func testPresetStorePersistsAndRemoves() {
+        let defaults = freshDefaults()
+        let store = PresetStore(defaults: defaults)
+        store.add(emoji: "🍜", label: "Ramen", seconds: 240)
+        store.add(emoji: "🧀", label: "Fondue", seconds: 420)
+
+        let reloaded = PresetStore(defaults: defaults)
+        XCTAssertEqual(reloaded.saved, store.saved)
+
+        store.remove(store.saved[0].id)
+        XCTAssertEqual(store.saved.map(\.label), ["Fondue"])
+    }
+
     func testSoonestPrefersRunningTimer() {
         let running = KitchenTimer(id: UUID(), label: "A", emoji: "🍵", totalDuration: 60,
                                    endDate: t0.addingTimeInterval(60), pausedRemaining: nil)

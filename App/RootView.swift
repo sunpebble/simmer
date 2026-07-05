@@ -3,6 +3,7 @@ import SwiftUI
 struct RootView: View {
     @Environment(ProStore.self) private var pro
     @State private var store = TimerStore()
+    @State private var presets = PresetStore()
     @State private var showPaywall = false
     @State private var showCustom = false
 
@@ -27,7 +28,8 @@ struct RootView: View {
         .onAppear { if CommandLine.arguments.contains("-paywall") { showPaywall = true } }
         #endif
         .sheet(isPresented: $showCustom) {
-            CustomTimerSheet { emoji, label, seconds in
+            CustomTimerSheet(canSave: pro.isPro) { emoji, label, seconds, save in
+                if save { presets.add(emoji: emoji, label: label, seconds: seconds) }
                 start(label: label, emoji: emoji, seconds: seconds)
             }
         }
@@ -96,6 +98,20 @@ struct RootView: View {
                         .padding(.horizontal, 14)
                         .padding(.vertical, 10)
                         .background(Capsule().stroke(Theme.ink.opacity(0.3)))
+                }
+                ForEach(presets.saved) { preset in
+                    Button {
+                        start(label: preset.label, emoji: preset.emoji, seconds: preset.seconds)
+                    } label: {
+                        Text("\(preset.emoji) \(preset.label) · \(timerText(preset.seconds))")
+                            .font(Theme.font(13, weight: .semibold))
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 10)
+                            .background(Capsule().fill(Theme.flame.opacity(0.15)))
+                    }
+                    .contextMenu {
+                        Button("Remove Preset", role: .destructive) { presets.remove(preset.id) }
+                    }
                 }
                 ForEach(Preset.builtins) { preset in
                     Button {
@@ -176,7 +192,9 @@ struct CustomTimerSheet: View {
     @State private var seconds = 0
     @State private var label = ""
     @State private var emoji = "🍲"
-    let onStart: (String, String, TimeInterval) -> Void
+    @State private var saveAsPreset = false
+    let canSave: Bool  // Pro: keep this timer in the preset bar
+    let onStart: (String, String, TimeInterval, Bool) -> Void
 
     private let emojis = ["🍲", "🍳", "🥚", "🍝", "🍚", "🥩", "🍞", "🍵", "🧁", "🥦", "🍕", "🦐"]
 
@@ -216,10 +234,19 @@ struct CustomTimerSheet: View {
             TextField("Label (optional)", text: $label)
                 .textFieldStyle(.roundedBorder)
 
+            if canSave {
+                Toggle(isOn: $saveAsPreset) {
+                    Text("SAVE AS PRESET")
+                        .font(Theme.font(12, weight: .semibold))
+                        .kerning(1)
+                }
+                .tint(Theme.flame)
+            }
+
             Button {
                 let total = TimeInterval(minutes * 60 + seconds)
                 guard total > 0 else { return }
-                onStart(emoji, label.isEmpty ? "Timer" : label, total)
+                onStart(emoji, label.isEmpty ? "Timer" : label, total, canSave && saveAsPreset)
                 dismiss()
             } label: {
                 Text("START")

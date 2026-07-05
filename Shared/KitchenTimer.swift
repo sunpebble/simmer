@@ -25,7 +25,7 @@ struct KitchenTimer: Identifiable, Codable, Equatable {
     }
 }
 
-struct Preset: Identifiable, Equatable {
+struct Preset: Identifiable, Equatable, Codable {
     let id: String
     let emoji: String
     let label: String
@@ -33,11 +33,16 @@ struct Preset: Identifiable, Equatable {
 
     static let builtins: [Preset] = [
         Preset(id: "tea", emoji: "🍵", label: "Tea", seconds: 3 * 60),
+        Preset(id: "ramen", emoji: "🍜", label: "Ramen", seconds: 4 * 60),
+        Preset(id: "french-press", emoji: "☕", label: "French Press", seconds: 4 * 60),
+        Preset(id: "steak", emoji: "🥩", label: "Rest Steak", seconds: 5 * 60),
         Preset(id: "soft-egg", emoji: "🥚", label: "Soft Egg", seconds: 6 * 60),
+        Preset(id: "veg", emoji: "🥦", label: "Steam Veg", seconds: 8 * 60),
         Preset(id: "hard-egg", emoji: "🍳", label: "Hard Egg", seconds: 10 * 60),
         Preset(id: "pasta", emoji: "🍝", label: "Pasta", seconds: 10 * 60),
+        Preset(id: "dumplings", emoji: "🥟", label: "Dumplings", seconds: 10 * 60),
         Preset(id: "rice", emoji: "🍚", label: "Rice", seconds: 15 * 60),
-        Preset(id: "steak", emoji: "🥩", label: "Rest Steak", seconds: 5 * 60),
+        Preset(id: "potatoes", emoji: "🥔", label: "Potatoes", seconds: 20 * 60),
         Preset(id: "oven", emoji: "🍞", label: "Oven", seconds: 25 * 60),
     ]
 }

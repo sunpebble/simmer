@@ -98,3 +98,37 @@ final class TimerStore {
             .removePendingNotificationRequests(withIdentifiers: [id.uuidString])
     }
 }
+
+/// User-saved custom presets (Pro). Shown in the preset bar next to the builtins.
+@MainActor
+@Observable
+final class PresetStore {
+    private static let storageKey = "savedPresets"
+    private let defaults: UserDefaults
+
+    private(set) var saved: [Preset] = []
+
+    init(defaults: UserDefaults = .standard) {
+        self.defaults = defaults
+        if let data = defaults.data(forKey: Self.storageKey),
+           let list = try? JSONDecoder().decode([Preset].self, from: data) {
+            saved = list
+        }
+    }
+
+    func add(emoji: String, label: String, seconds: TimeInterval) {
+        saved.append(Preset(id: UUID().uuidString, emoji: emoji, label: label, seconds: seconds))
+        persist()
+    }
+
+    func remove(_ id: String) {
+        saved.removeAll { $0.id == id }
+        persist()
+    }
+
+    private func persist() {
+        if let data = try? JSONEncoder().encode(saved) {
+            defaults.set(data, forKey: Self.storageKey)
+        }
+    }
+}
