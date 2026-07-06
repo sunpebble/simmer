@@ -70,11 +70,23 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
     dependencies:
       - target: Simmer
+  SimmerUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - SimmerUITests
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.sunpebble.simmer.uitests
+    dependencies:
+      - target: Simmer
 schemes:
   Simmer:
     build:
       targets:
         Simmer: all
+        SimmerUITests: [test]
     run:
       config: Debug
       storeKitConfiguration: Simmer.storekit
@@ -83,3 +95,4 @@ schemes:
     test:
       targets:
         - SimmerTests
+        - SimmerUITests

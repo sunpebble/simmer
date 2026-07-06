@@ -18,6 +18,25 @@ final class TimerStore {
            let saved = try? JSONDecoder().decode([KitchenTimer].self, from: data) {
             timers = saved
         }
+        // ponytail: ASC 截图演示种子；仅 -seedDemo 时注入，生产零影响。
+        if CommandLine.arguments.contains("-seedDemo"), timers.isEmpty {
+            seedDemo(now: .now)
+        }
+    }
+
+    private func seedDemo(now: Date) {
+        // (label, emoji, total, remaining):混合将完成 / 进行中状态,让 burnerGrid 好看。
+        let spec: [(String, String, TimeInterval, TimeInterval)] = [
+            ("Pasta", "🍝", 480, 95),
+            ("Rice",  "🍚", 300, 210),
+            ("Tea",   "🍵", 180, 40),
+            ("Eggs",  "🥚", 600, 520),
+        ]
+        for (label, emoji, total, remaining) in spec {
+            timers.append(KitchenTimer(id: UUID(), label: label, emoji: emoji,
+                                       totalDuration: total,
+                                       endDate: now.addingTimeInterval(remaining)))
+        }
     }
 
     func start(label: String, emoji: String, duration: TimeInterval, now: Date = .now) {
