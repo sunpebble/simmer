@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/sunpebble/simmer/compare/v0.4.0...v0.5.0) (2026-07-06)
+
+
+### Features
+
+* add Simplified Chinese (zh-Hans) localization ([6838ffc](https://github.com/sunpebble/simmer/commit/6838ffcd7732b0d4d354de7a95e57db7ead1b8a7))
+
 ## [0.4.0](https://github.com/sunpebble/simmer/compare/v0.3.0...v0.4.0) (2026-07-05)
 
 
