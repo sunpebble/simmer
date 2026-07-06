@@ -94,8 +94,8 @@ final class TimerStore {
     private func schedule(_ timer: KitchenTimer) {
         guard live, let end = timer.endDate else { return }
         let content = UNMutableNotificationContent()
-        content.title = "\(timer.emoji) \(timer.label)"
-        content.body = "Time's up!"
+        content.title = "\(timer.emoji) \(timer.localizedName)"
+        content.body = String(localized: "Time's up!")
         content.sound = .default
         let trigger = UNTimeIntervalNotificationTrigger(
             timeInterval: max(1, end.timeIntervalSinceNow), repeats: false)

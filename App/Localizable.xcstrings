@@ -1,0 +1,496 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "SIMMER": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SIMMER"
+          }
+        }
+      }
+    },
+    "PRO": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PRO"
+          }
+        }
+      }
+    },
+    "Nothing on the stove": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "灶上空空"
+          }
+        }
+      }
+    },
+    "Tap a preset below to start a timer.\nIt lives on your Lock Screen and\nin the Dynamic Island.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点击下方预设开始计时。\n它会显示在锁屏和\n灵动岛上。"
+          }
+        }
+      }
+    },
+    "Restart": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新开始"
+          }
+        }
+      }
+    },
+    "+1 minute": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+1 分钟"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        }
+      }
+    },
+    "Custom": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自定义"
+          }
+        }
+      }
+    },
+    "Remove Preset": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除预设"
+          }
+        }
+      }
+    },
+    "DONE": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完成"
+          }
+        }
+      }
+    },
+    "OVER +%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "超时 +%@"
+          }
+        }
+      }
+    },
+    "PAUSED": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已暂停"
+          }
+        }
+      }
+    },
+    "CUSTOM TIMER": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自定义计时"
+          }
+        }
+      }
+    },
+    "Minutes": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分钟"
+          }
+        }
+      }
+    },
+    "%lld min": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 分"
+          }
+        }
+      }
+    },
+    "Seconds": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "秒"
+          }
+        }
+      }
+    },
+    "%lld sec": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒"
+          }
+        }
+      }
+    },
+    "Label (optional)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标签(可选)"
+          }
+        }
+      }
+    },
+    "SAVE AS PRESET": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "存为预设"
+          }
+        }
+      }
+    },
+    "Timer": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "计时器"
+          }
+        }
+      }
+    },
+    "START": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始"
+          }
+        }
+      }
+    },
+    "SIMMER PRO": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SIMMER PRO"
+          }
+        }
+      }
+    },
+    "Run every burner at once — unlimited timers": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "同时运行每个灶台 — 无限计时"
+          }
+        }
+      }
+    },
+    "All of them grouped in the Dynamic Island": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部聚合在灵动岛"
+          }
+        }
+      }
+    },
+    "Save your go-to timers as presets": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把常用计时存为预设"
+          }
+        }
+      }
+    },
+    "Restart finished timers without rebuilding them": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一键重启已完成的计时"
+          }
+        }
+      }
+    },
+    "Support an indie developer": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "支持独立开发者"
+          }
+        }
+      }
+    },
+    "PAY ONCE. YOURS FOREVER.\nNO SUBSCRIPTION. NO ACCOUNT.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一次购买,终身可用。\n无需订阅,无需账号。"
+          }
+        }
+      }
+    },
+    "UNLOCK FOR %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "以 %@ 解锁"
+          }
+        }
+      }
+    },
+    "Restore Purchase": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "恢复购买"
+          }
+        }
+      }
+    },
+    "Time's up!": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "时间到!"
+          }
+        }
+      }
+    },
+    "Product not available. Check App Store Connect setup.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "商品不可用。请检查 App Store Connect 配置。"
+          }
+        }
+      }
+    },
+    "Couldn't load product: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法加载商品:%@"
+          }
+        }
+      }
+    },
+    "Purchase couldn't be verified: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "购买无法验证:%@"
+          }
+        }
+      }
+    },
+    "Purchase is pending approval.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "购买待审批。"
+          }
+        }
+      }
+    },
+    "Purchase failed: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "购买失败:%@"
+          }
+        }
+      }
+    },
+    "Restore failed: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "恢复失败:%@"
+          }
+        }
+      }
+    },
+    "Tea": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "茶"
+          }
+        }
+      }
+    },
+    "Ramen": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拉面"
+          }
+        }
+      }
+    },
+    "French Press": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "法压壶"
+          }
+        }
+      }
+    },
+    "Rest Steak": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "醒牛排"
+          }
+        }
+      }
+    },
+    "Soft Egg": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "溏心蛋"
+          }
+        }
+      }
+    },
+    "Steam Veg": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "蒸蔬菜"
+          }
+        }
+      }
+    },
+    "Hard Egg": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全熟蛋"
+          }
+        }
+      }
+    },
+    "Pasta": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "意面"
+          }
+        }
+      }
+    },
+    "Dumplings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "饺子"
+          }
+        }
+      }
+    },
+    "Rice": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "米饭"
+          }
+        }
+      }
+    },
+    "Potatoes": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "土豆"
+          }
+        }
+      }
+    },
+    "Oven": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "烤箱"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.3"
+}

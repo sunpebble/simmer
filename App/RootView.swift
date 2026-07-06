@@ -104,7 +104,7 @@ struct RootView: View {
                     Button {
                         start(label: preset.label, emoji: preset.emoji, seconds: preset.seconds)
                     } label: {
-                        Text("\(preset.emoji) \(preset.label) · \(timerText(preset.seconds))")
+                        Text("\(preset.emoji) \(preset.localizedName) · \(timerText(preset.seconds))")
                             .font(Theme.font(13, weight: .semibold))
                             .padding(.horizontal, 14)
                             .padding(.vertical, 10)
@@ -118,7 +118,7 @@ struct RootView: View {
                     Button {
                         start(label: preset.label, emoji: preset.emoji, seconds: preset.seconds)
                     } label: {
-                        Text("\(preset.emoji) \(preset.label) · \(timerText(preset.seconds))")
+                        Text("\(preset.emoji) \(preset.localizedName) · \(timerText(preset.seconds))")
                             .font(Theme.font(13, weight: .semibold))
                             .padding(.horizontal, 14)
                             .padding(.vertical, 10)
@@ -179,7 +179,7 @@ struct BurnerView: View {
                 }
             }
             .frame(width: 130, height: 130)
-            Text(timer.label.uppercased())
+            Text(timer.localizedName.uppercased())
                 .font(Theme.font(11, weight: .semibold))
                 .kerning(1)
                 .foregroundStyle(Theme.faded)

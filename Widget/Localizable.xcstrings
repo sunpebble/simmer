@@ -1,0 +1,146 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "+%lld more": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+%lld 个"
+          }
+        }
+      }
+    },
+    "DONE": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完成"
+          }
+        }
+      }
+    },
+    "Tea": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "茶"
+          }
+        }
+      }
+    },
+    "Ramen": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拉面"
+          }
+        }
+      }
+    },
+    "French Press": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "法压壶"
+          }
+        }
+      }
+    },
+    "Rest Steak": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "醒牛排"
+          }
+        }
+      }
+    },
+    "Soft Egg": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "溏心蛋"
+          }
+        }
+      }
+    },
+    "Steam Veg": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "蒸蔬菜"
+          }
+        }
+      }
+    },
+    "Hard Egg": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全熟蛋"
+          }
+        }
+      }
+    },
+    "Pasta": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "意面"
+          }
+        }
+      }
+    },
+    "Dumplings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "饺子"
+          }
+        }
+      }
+    },
+    "Rice": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "米饭"
+          }
+        }
+      }
+    },
+    "Potatoes": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "土豆"
+          }
+        }
+      }
+    },
+    "Oven": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "烤箱"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.3"
+}

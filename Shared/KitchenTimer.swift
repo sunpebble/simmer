@@ -10,6 +10,8 @@ struct KitchenTimer: Identifiable, Codable, Equatable {
 
     var isRunning: Bool { endDate != nil }
 
+    var localizedName: String { NSLocalizedString(label, comment: "") }
+
     func remaining(at now: Date = .now) -> TimeInterval {
         if let endDate { return max(0, endDate.timeIntervalSince(now)) }
         return pausedRemaining ?? 0
@@ -35,6 +37,7 @@ struct Preset: Identifiable, Equatable, Codable {
     let emoji: String
     let label: String
     let seconds: TimeInterval
+    var localizedName: String { NSLocalizedString(label, comment: "") }
 
     static let builtins: [Preset] = [
         Preset(id: "tea", emoji: "🍵", label: "Tea", seconds: 3 * 60),

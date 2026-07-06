@@ -50,7 +50,7 @@ struct TimerListView: View {
             ForEach(timers.prefix(4)) { snap in
                 HStack(spacing: 10) {
                     Text(snap.emoji).font(.system(size: 22))
-                    Text(snap.label)
+                    Text(NSLocalizedString(snap.label, comment: ""))
                         .font(.system(size: 14, weight: .semibold, design: .rounded))
                         .lineLimit(1)
                     Spacer()
