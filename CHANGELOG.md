@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.6.0](https://github.com/sunpebble/simmer/compare/v0.5.0...v0.6.0) (2026-07-07)
+
+
+### Features
+
+* seed demo timers and App Store screenshot UITests ([76fec78](https://github.com/sunpebble/simmer/commit/76fec787c0cbc8116830045e933a21b1cc4d90df))
+
+
+### Bug Fixes
+
+* **i18n:** localize demo timer labels; full-width punctuation in zh copy ([e2a4be4](https://github.com/sunpebble/simmer/commit/e2a4be4b95c674cbd95f52d36d2a5732779c82bd))
+
 ## [0.5.0](https://github.com/sunpebble/simmer/compare/v0.4.0...v0.5.0) (2026-07-06)
 
 
