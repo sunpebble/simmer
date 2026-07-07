@@ -30,7 +30,7 @@ final class TimerStore {
             ("Pasta", "🍝", 480, 95),
             ("Rice",  "🍚", 300, 210),
             ("Tea",   "🍵", 180, 40),
-            ("Eggs",  "🥚", 600, 520),
+            ("Soft Egg", "🥚", 600, 520),
         ]
         for (label, emoji, total, remaining) in spec {
             timers.append(KitchenTimer(id: UUID(), label: label, emoji: emoji,

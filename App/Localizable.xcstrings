@@ -176,7 +176,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "标签(可选)"
+            "value": "标签（可选）"
           }
         }
       }
@@ -276,7 +276,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "一次购买,终身可用。\n无需订阅,无需账号。"
+            "value": "一次购买，终身可用。\n无需订阅，无需账号。"
           }
         }
       }
@@ -306,7 +306,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "时间到!"
+            "value": "时间到！"
           }
         }
       }
@@ -326,7 +326,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无法加载商品:%@"
+            "value": "无法加载商品：%@"
           }
         }
       }
@@ -336,7 +336,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "购买无法验证:%@"
+            "value": "购买无法验证：%@"
           }
         }
       }
@@ -356,7 +356,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "购买失败:%@"
+            "value": "购买失败：%@"
           }
         }
       }
@@ -366,7 +366,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "恢复失败:%@"
+            "value": "恢复失败：%@"
           }
         }
       }
