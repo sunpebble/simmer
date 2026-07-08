@@ -18,7 +18,6 @@ final class TimerStore {
            let saved = try? JSONDecoder().decode([KitchenTimer].self, from: data) {
             timers = saved
         }
-        // ponytail: ASC 截图演示种子；仅 -seedDemo 时注入，生产零影响。
         if CommandLine.arguments.contains("-seedDemo"), timers.isEmpty {
             seedDemo(now: .now)
         }

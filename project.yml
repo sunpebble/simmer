@@ -27,7 +27,6 @@ targets:
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         UILaunchScreen: {}
-        # ponytail: fixed cream theme — lock light mode so default text never renders white
         UIUserInterfaceStyle: Light
         NSSupportsLiveActivities: true
         ITSAppUsesNonExemptEncryption: false
